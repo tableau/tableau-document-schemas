@@ -1,6 +1,6 @@
 # Tableau Document Schemas
 
-XOfficial XML Schema Definition (XSD) files for Tableau document formats.
+Official XML Schema Definition (XSD) files for Tableau document formats.
 
 ## Overview
 
