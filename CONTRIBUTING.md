@@ -1,6 +1,6 @@
 # Contributing Guide For Tableau Document Schemas
 
-This page lists the operational governance model of this project, as well as the recommendations and requirements for how to best contribute to {PROJECT}. We strive to obey these as best as possible. As always, thanks for contributing – we hope these guidelines make it easier and shed some light on our approach and processes.
+This page lists the operational governance model of this project, as well as the recommendations and requirements for how to best contribute to Tableau Document Schemas. We strive to obey these as best as possible. As always, thanks for contributing – we hope these guidelines make it easier and shed some light on our approach and processes.
 
 # Governance Model
 
@@ -13,9 +13,7 @@ The intent and goal of open sourcing this project is to increase the contributor
 Use GitHub Issues page to submit issues, enhancement requests and discuss ideas.
 
 ### Bug Reports and Fixes
--  If you find a bug, please search for it in the [Issues](https://github.com/{project_slug}/issues), and if it isn't already tracked,
-   [create a new issue](https://github.com/{project_slug}/issues/new). Fill out the "Bug Report" section of the issue template. Even if an Issue is closed, feel free to comment and add details, it will still
-   be reviewed.
+-  If you find a bug, please search for it in the [Issues](https://github.com/tableau-document-schemas/issues), and if it isn't already tracked, [create a new issue](https://github.com/tableau-document-schemas/issues/new). Fill out the "Bug Report" section of the issue template. Ensure your description is clear and has sufficient instructions to be able to reproduce the issue. Even if an Issue is closed, feel free to comment and add details, it will still be reviewed.
 -  Issues that have already been identified as a bug (note: able to reproduce) will be labelled `bug`.
 -  If you'd like to submit a fix for a bug, [send a Pull Request](#creating_a_pull_request) and mention the Issue number.
   -  Include tests that isolate the bug and verifies that it was fixed.
