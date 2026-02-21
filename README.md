@@ -4,7 +4,7 @@ Official XML Schema Definition (XSD) files for Tableau document formats.
 
 ## Overview
 
-This repository contains machine-readable schema definitions (XSD) for the Tableau workbook format (TWB) alongside conceptual information not covered by the XSD itself. Released in February 2026, these files represent an officially-supported baseline for the TWB format.
+This repository contains machine-readable schema definitions (XSD) for the Tableau workbook format (TWB) alongside conceptual information not covered by the XSD. Started in February 2026, these files represent an officially-supported baseline for the TWB format.
 
 ## What's a TWB? What's an XSD?
 - **TWB (Tableau Workbook)**: An XML document describing a Tableau workbook, including its worksheets, dashboards, and stories.
@@ -17,6 +17,7 @@ The schemas in this repository provide a reference for developers and agents to 
 ### Directory Structure
 Schema are organized into folders by Tableau version using the naming convention `YYYY_R`, where `YYYY` is the year, and `R` is the release number for that year.
 
+**Example:**
 ```
 schemas
 └───2026_1
@@ -27,6 +28,16 @@ schemas
 When creating or modifying a TWB, ensure that the `original-version` and `version` attributes of the `<workbook>` element correspond with the version of the XSD you are using for validation. Note that the version strings don't match exactly, but correspond like below:
 - TWB version string: `26.1`
 - XSD file: `twb_2026.1.0.xsd`
+
+**Example:**
+```
+<workbook original-version='26.1'
+    source-build='0.0.0 (0000.0.0.0)'
+    source-platform='win'
+    version='26.1'
+    xmlns:user='http://www.tableausoftware.com/xml/user'
+>
+```
 
 ### Manifest by version
 The `<document-format-change-manifest>` element has historically included a list of features used by the workbook, used by Tableau to determine version compatibility between the TWB and the software that's opening it.
@@ -42,6 +53,7 @@ If you use `<ManifestByVersion />` like this, any version of Tableau equal to or
         <ManifestByVersion />
     </document-format-change-manifest>
 ```
+
 ## Validating a TWB against the XSD
 To validate your Tableau Workbook (TWB) against the official schema (XSD), use any standard XML validation tool. Since a TWB file is natively XML, you simply point your XML validator to the TWB and the corresponding XSD from this repository.
 
@@ -60,9 +72,9 @@ Sometimes, a workbook passes schema validation but fails to load in a Tableau pr
 The schemas do not support building or validating packaged workbook files (TWBX).
 
 ## Contributions & Feedback
-- Feature Requests: We welcome specific feedback and feature requests for the TWB structure in the [Issue Tracker](issues). However, we don't approve pull requests on the public repository.
-- Bugs: Report bugs through the repository's [Issue Tracker](issues).
-- Discussions: For general questions or ideas, join the [Discussion](discussions).
+- Feature Requests: We welcome specific feedback and feature requests for the TWB structure in the [Issue Tracker](https://github.com/tableau/tableau-document-schemas/issues). However, we don't approve pull requests on the public repository.
+- Bugs: Report bugs through the repository's [Issue Tracker](https://github.com/tableau/tableau-document-schemas/issues).
+- Discussions: For general questions or ideas, join the [Discussion](https://github.com/tableau/tableau-document-schemas/discussions).
 
 ## Governance and Legal
 
