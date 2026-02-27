@@ -1,17 +1,17 @@
 <!--
  Tableau Workbook Schema (TWB)
- Version: 2025.3.0
- Published: 2025-11-03T23:14:20Z
- Build: 20253.25.1103.0000
- This schema validates Tableau workbook (.twb) files for version 2025.3.
+ Version: 2026.1.0
+ Published: 2026-02-27T19:11:46Z
+ Build: 20261.26.0211.1127
+ This schema validates Tableau workbook (.twb) files for version 2026.1.
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:user="http://www.tableausoftware.com/xml/user" elementFormDefault="qualified" version="2025.3.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:user="http://www.tableausoftware.com/xml/user" elementFormDefault="qualified" version="2026.1.0">
   <xs:annotation>
     <xs:documentation>
-      Tableau Workbook Schema for version 2025.3
+      Tableau Workbook Schema for version 2026.1
       Publication Info:
-      - Generated: 2025-11-03T23:14:20Z
-      - Source Build: 20253.25.1103.0000
+      - Generated: 2026-02-27T19:11:46Z
+      - Source Build: 20261.26.0211.1127
       - Schema Version: 1.0
     </xs:documentation>
   </xs:annotation>
@@ -1891,6 +1891,7 @@
           <xs:attribute name="type" type="RelationType-ST" use="required"/>
           <xs:attribute name="join" type="JoinType-ST"/>
           <xs:attribute name="name" type="xs:string"/>
+          <xs:attribute name="caption" type="xs:string"/>
           <xs:attribute name="table" type="QualifiedName-ST"/>
           <xs:attributeGroup ref="ConnectionName-AG"/>
           <xs:attribute name="stored-proc" type="QualifiedName-ST"/>
@@ -2196,18 +2197,18 @@
       </xs:element>
     </xs:sequence>
   </xs:group>
-  <xs:group name="DataSourceGraph-Parents-G">
+  <xs:group name="DataSourceTree-Parents-G">
     <xs:sequence>
       <xs:element name="parents">
         <xs:complexType>
           <xs:sequence>
-            <xs:group minOccurs="0" maxOccurs="unbounded" ref="DataSourceGraph-G"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="DataSourceTreeNode-G"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:group>
-  <xs:group name="DataSourceGraph-ObjectModelRelationships-G">
+  <xs:group name="DataSourceTree-ObjectModelRelationships-G">
     <xs:sequence>
       <xs:element name="relationships">
         <xs:complexType>
@@ -2218,13 +2219,13 @@
       </xs:element>
     </xs:sequence>
   </xs:group>
-  <xs:group name="DataSourceGraph-G">
+  <xs:group name="DataSourceTreeNode-G">
     <xs:sequence>
       <xs:element minOccurs="0" name="pds">
         <xs:complexType>
           <xs:sequence>
-            <xs:group minOccurs="0" ref="DataSourceGraph-Parents-G"/>
-            <xs:group minOccurs="0" ref="DataSourceGraph-ObjectModelRelationships-G"/>
+            <xs:group minOccurs="0" ref="DataSourceTree-Parents-G"/>
+            <xs:group minOccurs="0" ref="DataSourceTree-ObjectModelRelationships-G"/>
           </xs:sequence>
           <xs:attribute name="name" type="xs:string" use="required"/>
           <xs:attribute name="datasource-url" type="xs:string"/>
@@ -2234,12 +2235,88 @@
       </xs:element>
     </xs:sequence>
   </xs:group>
-  <xs:group name="DataSourceGraph-Wrapper-G">
+  <xs:group name="DataSourceTree-NamePersistenceMaps-G">
     <xs:sequence>
-      <xs:element minOccurs="0" name="data-source-graph">
+      <xs:element minOccurs="0" name="name-persistence-map">
         <xs:complexType>
           <xs:sequence>
-            <xs:group minOccurs="0" ref="DataSourceGraph-G"/>
+            <xs:element minOccurs="0" name="relation-alias-map">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="map">
+                    <xs:complexType>
+                      <xs:attribute name="current-alias" type="xs:string" use="required"/>
+                      <xs:attribute name="alias-in-genesis-datasource" type="xs:string" use="required"/>
+                      <xs:attribute name="genesis-datasource-name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="object-id-map">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="map">
+                    <xs:complexType>
+                      <xs:attribute name="current-id" type="xs:string" use="required"/>
+                      <xs:attribute name="id-in-genesis-datasource" type="xs:string" use="required"/>
+                      <xs:attribute name="genesis-datasource-name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="user-created-column-name-map">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="map">
+                    <xs:complexType>
+                      <xs:attribute name="current-name" type="xs:string" use="required"/>
+                      <xs:attribute name="name-in-origin-datasource" type="xs:string" use="required"/>
+                      <xs:attribute name="origin-datasource-name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="parameter-name-map">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="map">
+                    <xs:complexType>
+                      <xs:attribute name="current-name" type="xs:string" use="required"/>
+                      <xs:attribute name="name-in-origin-datasource" type="xs:string" use="required"/>
+                      <xs:attribute name="origin-datasource-name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="database-column-name-map">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="map">
+                    <xs:complexType>
+                      <xs:attribute name="current-name" type="xs:string" use="required"/>
+                      <xs:attribute name="name-in-remote-database" type="xs:string" use="required"/>
+                      <xs:attribute name="relation-current-alias" type="xs:string" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="DataSourceTree-Wrapper-G">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data-source-tree">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group minOccurs="0" ref="DataSourceTreeNode-G"/>
+            <xs:group minOccurs="0" ref="DataSourceTree-NamePersistenceMaps-G"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -3238,9 +3315,9 @@
       <xs:group ref="ObjectGraph-G"/>
     </xs:sequence>
   </xs:group>
-  <xs:group name="DataSource-DataSourceGraph-G">
+  <xs:group name="DataSource-DataSourceTree-G">
     <xs:sequence>
-      <xs:group ref="DataSourceGraph-Wrapper-G"/>
+      <xs:group ref="DataSourceTree-Wrapper-G"/>
     </xs:sequence>
   </xs:group>
   <xs:complexType name="DataSource-CT">
@@ -4608,6 +4685,11 @@
       <xs:enumeration value="col-height"/>
       <xs:enumeration value="col-width"/>
       <xs:enumeration value="content"/>
+      <xs:enumeration value="corner-radius"/>
+      <xs:enumeration value="corner-radius-top-left"/>
+      <xs:enumeration value="corner-radius-top-right"/>
+      <xs:enumeration value="corner-radius-bottom-right"/>
+      <xs:enumeration value="corner-radius-bottom-left"/>
       <xs:enumeration value="density-color"/>
       <xs:enumeration value="density-kernel-size"/>
       <xs:enumeration value="density-intensity"/>
@@ -6401,6 +6483,7 @@
       <xs:enumeration value="4"/>
       <xs:enumeration value="8"/>
       <xs:enumeration value="16"/>
+      <xs:enumeration value="32"/>
       <xs:enumeration value="12"/>
       <xs:enumeration value="29"/>
       <xs:enumeration value="30"/>
@@ -7146,6 +7229,7 @@
       <xs:group ref="Workbook-ReferencedExtensions-G"/>
       <xs:group ref="Workbook-ExplainData-G"/>
       <xs:group minOccurs="0" ref="Workbook-DataOrientation-G"/>
+      <xs:group minOccurs="0" ref="Workbook-TabAgentConfig-G"/>
       <xs:group minOccurs="0" ref="Workbook-AcceleratorDetails-G"/>
       <xs:group minOccurs="0" ref="Workbook-WorkbookOptimizer-G"/>
     </xs:sequence>
@@ -7395,6 +7479,11 @@
   <xs:group name="Workbook-DataOrientation-G">
     <xs:sequence>
       <xs:group minOccurs="0" ref="DataOrientation-G"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="Workbook-TabAgentConfig-G">
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="TabAgentConfig-G"/>
     </xs:sequence>
   </xs:group>
   <xs:simpleType name="Workbook-Explanations-ST">
