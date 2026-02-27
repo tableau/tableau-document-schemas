@@ -68,7 +68,7 @@ The schemas provide a reference for building a structurally-compliant TWB and do
 - calculated field contents, like function names and object references
 - references to other named workbook contents, like tab names
 
-You can locate XML elements that aren't validated by searching in the XSD for `processContents="skip"`.
+You can locate XML elements that aren't validated by searching the XSD for `processContents="skip"`.
 
 ### Support limitations
 Sometimes, a workbook passes schema validation (syntactic validation) but fails to load in a Tableau product (semantic validation). Semantic validation failures like this aren't covered by Tableau technical support.
