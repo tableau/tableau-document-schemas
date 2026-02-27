@@ -63,7 +63,7 @@ To validate your Tableau Workbook (TWB) against the official schema (XSD), use a
 The XSD is used for structural (syntactic) validation of a workbook. Successful syntactic validation can't guarantee that a workbook will open in Tableau (semantic validation).
 
 ### The XSD offers a baseline for syntactic validation
-The schemas provide a reference for building a structurally-compliant TWB and don't cover the validation of some content. For example, here are some of the things that aren't validated when using the XSD:
+The schemas provide a reference for building a structurally-compliant TWB and don't cover the validation of some content. For example, some of the things that aren't validated when using the XSD are:
 - attributes in connection elements
 - calculated field contents, like function names and object references
 - references to other named workbook contents, like tab names
