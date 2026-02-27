@@ -67,6 +67,7 @@ The schemas provide a reference for building a structurally-compliant TWB and do
 - attributes in connection elements
 - calculated field contents, like function names and object references
 - references to other named workbook contents, like tab names
+
 You can locate XML elements that aren't validated by searching in the XSD for `processContents="skip"`.
 
 ### Support limitations
