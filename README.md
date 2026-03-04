@@ -76,12 +76,3 @@ Sometimes, a workbook passes schema validation (syntactic validation) but fails 
 ### No TWBX Support
 The schemas do not support building or validating packaged workbook files (TWBX).
 
-## Contributions & Feedback
-- Feature Requests: We welcome specific feedback and feature requests for the TWB structure in the [Issue Tracker](https://github.com/tableau/tableau-document-schemas/issues). However, we don't approve pull requests on the public repository.
-- Bugs: Report bugs through the repository's [Issue Tracker](https://github.com/tableau/tableau-document-schemas/issues).
-- Discussions: For general questions or ideas, join the [Discussion](https://github.com/tableau/tableau-document-schemas/discussions).
-
-## Governance and Legal
-
-- **Code of Conduct**: This project adheres to the Salesforce [Code of Conduct](CODE_OF_CONDUCT.md).
-- **License**: Licensed under the terms in [LICENSE.txt](LICENSE.txt).
