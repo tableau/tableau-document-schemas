@@ -10,7 +10,7 @@ The intent and goal of open sourcing this project is to increase user base. Howe
 
 # Issues & Bug Reports
 
-Before submitting an issue or bug report, search the **Issues** category of the [Discussions](/discussions) page. If the issue or bug hasn't been reported, create a new **Issues** discussion. Ensure your description is clear and has sufficient instructions to be able to reproduce the issue or bug.
+Before submitting an issue or bug report, search the **Issues** category of the [Discussions](./discussions) page. If the issue or bug hasn't been reported, create a new **Issues** discussion. Ensure your description is clear and has sufficient instructions to be able to reproduce the issue or bug.
 
 Note: The *traditional* GitHub **Issues** page for this repository is hidden.  It can still be reached through some effort, but it isn't fully functional, and you can't create issues or bug reports from that page. Use the [Discussions](discussions/) page.
 
