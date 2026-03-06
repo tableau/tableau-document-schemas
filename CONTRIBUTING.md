@@ -12,7 +12,7 @@ The intent and goal of open sourcing this project is to increase user base. Howe
 
 Before submitting an issue or bug report, search the **Issues & Bug Reports** category of the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page. If the issue or bug hasn't been reported, create a new **Issues & Bug Reports** discussion. Ensure your description is clear and has sufficient instructions to be able to reproduce the issue or bug.
 
-Note: The *traditional* GitHub **Issues** page for this repository is hidden.  It can still be reached through some effort, but it isn't fully functional, and you can't create issues or bug reports from that page. Use the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page.
+Note: The *traditional* GitHub **Issues** page for this repository is hidden and not monitored.
 
 # Enhancement Requests
  If you'd like to add new functionality to this project, describe the problem you want to solve in a new post to the **Ideas** category of the  [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page. Ensure your request is clear and has sufficient detail.
