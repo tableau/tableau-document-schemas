@@ -77,4 +77,4 @@ Sometimes, a workbook passes schema validation (syntactic validation) but fails 
 The schemas do not support building or validating packaged workbook files (TWBX).
 
 ## Contributing
-See [Contributing](https://github.com/tableau/tableau-document-schemas/tree/dev/rkunkel/authoring-api-cx?tab=contributing-ov-file#contributing).
+See the **Contributing** tab.
