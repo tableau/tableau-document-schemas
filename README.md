@@ -76,3 +76,5 @@ Sometimes, a workbook passes schema validation (syntactic validation) but fails 
 ### No TWBX Support
 The schemas do not support building or validating packaged workbook files (TWBX).
 
+## Contributing
+See [Contributing](./CONTRIBUTING.md)
