@@ -10,13 +10,13 @@ The intent and goal of open sourcing this project is to increase user base. Howe
 
 # Issues & Bug Reports
 
-Before submitting an issue or bug report, search the **Issues** category of the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page. If the issue or bug hasn't been reported, create a new **Issues** discussion. Ensure your description is clear and has sufficient instructions to be able to reproduce the issue or bug.
+Before submitting an issue or bug report, search the **Issues & Bug Reports** category of the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page. If the issue or bug hasn't been reported, create a new **Issues & Bug Reports** discussion. Ensure your description is clear and has sufficient instructions to be able to reproduce the issue or bug.
 
 Note: The *traditional* GitHub **Issues** page for this repository is hidden.  It can still be reached through some effort, but it isn't fully functional, and you can't create issues or bug reports from that page. Use the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page.
 
 # Enhancement Requests
- If you'd like to add new functionality to this project, describe the problem you want to solve in a new post to the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page. Ensure your request is clear and has sufficient detail.
+ If you'd like to add new functionality to this project, describe the problem you want to solve in a new post to the **Ideas** category of the  [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page. Ensure your request is clear and has sufficient detail.
 
 # Discussions
 
-Use the [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) page to get public help, ask questions, and discuss the schema and its usage.
+Use the **General**, **Q&A**, and **Show and Tell** [Discussions](https://github.com/tableau/tableau-document-schemas/discussions) categories to get public help, ask questions, and discuss the schema and its usage.
