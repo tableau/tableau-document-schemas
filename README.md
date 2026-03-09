@@ -5,7 +5,7 @@ Official XML Schema Definition (XSD) files for Tableau document formats.
 
 ## Overview
 
-This repository contains machine-readable schema definitions (XSD) for the Tableau workbook format (TWB) alongside conceptual information not covered by the XSD. First published in February 2026, these files represent an officially-supported baseline for the TWB format.
+This repository contains machine-readable schema definitions (XSD) for the Tableau workbook format (TWB) alongside conceptual information not covered by the XSD. Formally published in February 2026, these files represent an officially-supported baseline for the TWB format.
 
 ## What's a TWB? What's an XSD?
 - **TWB (Tableau Workbook)**: An XML document describing a Tableau workbook, including its worksheets, dashboards, and stories.
