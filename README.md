@@ -1,4 +1,5 @@
 # Tableau Document Schemas
+[![Tableau Supported](https://img.shields.io/badge/Support%20Level-Tableau%20Supported-53bd92.svg)](https://www.tableau.com/support-levels-it-and-developer-tools)
 
 Official XML Schema Definition (XSD) files for Tableau document formats.
 
