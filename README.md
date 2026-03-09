@@ -5,7 +5,7 @@ Official XML Schema Definition (XSD) files for Tableau document formats.
 
 ## Overview
 
-This repository contains machine-readable schema definitions (XSD) for the Tableau workbook format (TWB) alongside conceptual information not covered by the XSD. Started in February 2026, these files represent an officially-supported baseline for the TWB format.
+This repository contains machine-readable schema definitions (XSD) for the Tableau workbook format (TWB) alongside conceptual information not covered by the XSD. First published in February 2026, these files represent an officially-supported baseline for the TWB format.
 
 ## What's a TWB? What's an XSD?
 - **TWB (Tableau Workbook)**: An XML document describing a Tableau workbook, including its worksheets, dashboards, and stories.
@@ -45,7 +45,7 @@ The `<document-format-change-manifest>` element has historically included a list
 
 To make direct workbook authoring simpler, inside of the `<document-format-change-manifest>` element, use a single `<ManifestByVersion />` element instead. This replaces the complex manual listing of individual features in the document manifest.
 
-If you use `<ManifestByVersion />` like this, any version of Tableau equal to or greater than the TWB's version shouldn't experience a failure to load due to version incompatibility. Versions of Tableau lower than the TWB's version will not be able to load the TWB.
+If you use `<ManifestByVersion />` like this, the TWB will be version-compatible with Tableau software that has an equal or greater version. Versions of Tableau lower than the TWB's version will not be able to load the TWB.
 
 **Example:**
 ```
