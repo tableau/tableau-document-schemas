@@ -72,6 +72,10 @@ The schemas provide a reference for building a structurally-compliant TWB and do
 You can locate XML elements that aren't validated by searching the XSD for `processContents="skip"`.
 
 ### Support limitations
+Tableau technical support doesn't cover:
+- **XML (semantic) validation failure.** This means that an XML validator claims the XML isn't valid.
+- **Semantic validation failure.** This means that an XML validator claims the XML is valid, but the workbook XML fails to load in a Tableau product (semantic validation).
+
 Sometimes, a workbook passes schema validation (syntactic validation) but fails to load in a Tableau product (semantic validation). Semantic validation failures like this aren't covered by Tableau technical support.
 
 ### No TWBX Support
