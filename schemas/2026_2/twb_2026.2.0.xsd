@@ -1,7 +1,7 @@
 <!--
  Tableau Workbook Schema (TWB)
  Version: 2026.2.0
- Published: 2026-06-15T23:29:13Z
+ Published: 2026-06-15T23:32:07Z
  Build: 20262.26.0528.2205
  This schema validates Tableau workbook (.twb) files for version 2026.2.
 -->
@@ -10,7 +10,7 @@
     <xs:documentation>
       Tableau Workbook Schema for version 2026.2
       Publication Info:
-      - Generated: 2026-06-15T23:29:13Z
+      - Generated: 2026-06-15T23:32:07Z
       - Source Build: 20262.26.0528.2205
       - Schema Version: 1.0
     </xs:documentation>
