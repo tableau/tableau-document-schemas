@@ -69,9 +69,9 @@ For basic syntactic validation only, you can compare your Tableau Workbook (TWB)
 
 ### REST API endpoints for validation
 Starting in Tableau Cloud June 2026 / Server 2026.2, you can use REST API endpoints to perform both syntactic and semantic validation of a TWB file:
-- [Validate Workbook](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_workbook)
-- [Validate Workbook and Upload](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_workbook_and_upload)
-- [Validate Uploaded Workbook](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_uploaded_workbook)
+- [Validate Workbook](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_workbook){:target="_blank"}
+- [Validate Workbook and Upload](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_workbook_and_upload){:target="_blank"}
+- [Validate Uploaded Workbook](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_uploaded_workbook){:target="_blank"}
 
 
 ## Important notes
