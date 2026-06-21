@@ -20,9 +20,11 @@ Schema are organized into folders by Tableau version using the naming convention
 
 **Example:**
 ```
-schemas
-└───2026_1
-    └───twb_2026.1.0.xsd    # Tableau Workbook schema for version 2026.1
+└───schemas
+    ├───2026_1
+    │       twb_2026.1.0.xsd    # Tableau Workbook schema for version 2026.1
+    └───2026_2
+            twb_2026.2.0.xsd    # Tableau Workbook schema for version 2026.2
 ```
 
 ### Version Compatibility
@@ -55,16 +57,27 @@ If you use `<ManifestByVersion />` like this, the TWB will be version-compatible
     </document-format-change-manifest>
 ```
 
-## Validating a TWB against the XSD
-To validate your Tableau Workbook (TWB) against the official schema (XSD), use any standard XML validation tool. Since a TWB file is natively XML, you simply point your XML validator to the TWB and the corresponding XSD from this repository.
+## Validating a TWB
+
+### Syntactic versus semantic validation
+
+**Syntactic validation**: Successful syntactic validation means that the TWB follows the structure rules imparted by the XSD. Syntactic validation doesn't guarantee that a workbook will open in Tableau.
+
+For basic syntactic validation only, you can compare your Tableau Workbook (TWB) against the official schema (XSD) by using any standard XML validation tool. Since a TWB file is natively XML, you simply point your XML validator to the TWB and the corresponding XSD from this repository.
+
+**Semantic validation**: Successful semantic validation means that a workbook will open in Tableau.
+
+### REST API endpoints for validation
+Starting in Tableau Cloud June 2026 / Server 2026.2, you can use REST API endpoints to perform both syntactic and semantic validation of a TWB file:
+- [Validate Workbook](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_workbook)
+- [Validate Workbook and Upload](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_workbook_and_upload)
+- [Validate Uploaded Workbook](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#validate_uploaded_workbook)
+
 
 ## Important notes
 
-### Syntatic versus semantic validation
-The XSD is used for structural (syntactic) validation of a workbook. Successful syntactic validation can't guarantee that a workbook will open in Tableau (semantic validation).
-
 ### The XSD offers a baseline for syntactic validation
-The schemas provide a reference for building a structurally-compliant TWB and don't cover the validation of some content. For example, some of the things that aren't validated when using the XSD are:
+The schemas provide a reference for building a structurally-compliant TWB and don't cover the validation of some content. Example of things that aren't validated when using only the XSD are:
 - attributes in connection elements
 - calculated field contents, like function names and object references
 - references to other named workbook contents, like tab names
