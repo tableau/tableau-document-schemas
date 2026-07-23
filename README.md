@@ -57,6 +57,43 @@ If you use `<ManifestByVersion />` like this, the TWB will be version-compatible
     </document-format-change-manifest>
 ```
 
+### TWB Localization
+The XSD contains localization information about the content of a TWB.
+
+Localization information appears in `<xs:annotation>` annotation elements under an element, attribute, or other declaration.  The value of `<user:localizable>` contains the localization allowed, and  `<xs:documentation>` contains notes. 
+
+Note: Not every possible string has been reviewed. You can't draw any localization conclusions for an element, attribute, or other component that *lack* localization information.
+
+**Example:**
+```
+<xs:attribute name="name" type="xs:string" use="required">
+  <xs:annotation>
+    <xs:appinfo>
+      <user:localizable value="identifier-reference"/>
+    </xs:appinfo>
+    <xs:documentation>
+      Points to the name attribute on a worksheet element.
+    </xs:documentation>
+  </xs:annotation>
+</xs:attribute>
+```
+
+The allowed values for `<user:localizable>` are:
+- `no-restrictions`: The string can be localized safely, without wider impact.
+<!-- Examples: Name of a zone, name of a folder -->
+- `add-if-missing`: If the string exists, it can be localized safely. If the string doesn’t exist, add it and localize it based on the "source" attribute.
+<!-- Examples: Caption in many elements <user:localizable value=”add-if-missing” source=”name”/> -->
+- `identifier`: The string can be localized safely, but other places in the XML that reference it need to be updated.
+<!-- Example: Dashboard name, Worksheet name -->
+- `identifier-reference`: The string matches an identifier string, and needs to be changed to match it.
+<!-- Examples: Window name pointing to Dashboard/Worksheet name -->
+- `see-documentation`: Additional considerations are required for localizing the string. See the `<xs:documentation>` element.
+<!-- Examples: Formatted text -->
+- `do-not-localize`: Don't localize the string.
+<!-- Examples: <value> elements in a Group -->
+
+Note: Many `<xs:annotation>` elements contain explanatory `<xs:documentation>` elements, even when the value of `<user:localizable>` *isn't* `see-documentation`.
+
 ## Validating a TWB
 
 ### Syntactic versus semantic validation
