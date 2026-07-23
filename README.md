@@ -60,9 +60,9 @@ If you use `<ManifestByVersion />` like this, the TWB will be version-compatible
 ### TWB Localization
 The XSD contains localization information about the content of a TWB.
 
-Localization information appears in `<xs:annotation>` annotation elements under an element, attribute, or other declaration.  The value of `<user:localizable>` contains the localization allowed, and  `<xs:documentation>` contains notes. 
+Localization information appears in `<xs:annotation>` annotation elements under an element, attribute, or other declaration. The value of `<user:localizable>` contains the category of allowed localization, and  `<xs:documentation>` (if present) contains notes. 
 
-Note: Not every possible string has been reviewed. You can't draw any localization conclusions for an element, attribute, or other component that *lack* localization information.
+Note: Not every possible string has been reviewed. You can't draw any localization conclusions for an element, attribute, or other component that *lacks* localization information.
 
 **Example:**
 ```
@@ -92,7 +92,7 @@ The allowed values for `<user:localizable>` are:
 - `do-not-localize`: Don't localize the string.
 <!-- Examples: <value> elements in a Group -->
 
-Note: Many `<xs:annotation>` elements contain explanatory `<xs:documentation>` elements, even when the value of `<user:localizable>` *isn't* `see-documentation`.
+Note: Many `<xs:annotation>` elements contain an explanatory `<xs:documentation>` element, even when the value of `<user:localizable>` *isn't* `see-documentation`.
 
 ## Validating a TWB
 
