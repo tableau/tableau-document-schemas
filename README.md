@@ -58,7 +58,7 @@ If you use `<ManifestByVersion />` like this, the TWB will be version-compatible
 ```
 
 ### TWB Localization
-The XSD contains localization information about the content of a TWB.
+Starting with the 2026.2 schema, the XSD contains localization information about the contents of a TWB.
 
 Localization information appears in `<xs:annotation>` annotation elements under an element, attribute, or other declaration. The value of `<user:localizable>` contains the category of allowed localization, and  `<xs:documentation>` (if present) contains notes. 
 
