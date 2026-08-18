@@ -6,7 +6,7 @@ in this repository under [`/schemas`](../schemas).
 
 It sniffs the workbook's version, picks the matching schema, and validates
 structure with a mature C XSD engine (libxml2, via `lxml`) — collecting
-line/column-tagged errors.
+line-tagged errors.
 
 ## What it does — and does not — check
 
@@ -91,8 +91,12 @@ agent or plugin — the exit code alone tells you the outcome; no output
 parsing is required to know whether it passed. `--json` output is always
 printed regardless of exit code, so callers that want the *why* (which
 elements, which lines) can parse `issues` after checking the exit code.
-With multiple inputs, a `1` or `2` only means "at least one problem
-occurred" — inspect each result's `isValid`/`issues` to see which.
+
+With multiple inputs, `2` takes priority over `1`: if any input hits a setup
+error, the exit code is `2` even if a *different* input was merely invalid
+(not errored). A `1` or `2` only means "at least one problem occurred
+somewhere in the batch" — inspect each result's `isValid`/`issues`
+individually to see which input(s) failed and how.
 
 ### JSON output shape
 
