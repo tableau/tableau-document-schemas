@@ -14,3 +14,4 @@ __pycache__/
 workbook_validation/downloads/
 workbook_validation/batch_*.json
 workbook_validation/workbooks_list.json
+.mcp.json
