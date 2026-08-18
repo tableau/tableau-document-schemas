@@ -3,3 +3,14 @@
 
 # Windows
 Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# workbook_validation: session/agent-task artifacts (downloaded test
+# fixtures and the batch files used to fan out those downloads)
+workbook_validation/downloads/
+workbook_validation/batch_*.json
+workbook_validation/workbooks_list.json
