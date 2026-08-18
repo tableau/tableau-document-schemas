@@ -2097,6 +2097,7 @@
     <xs:attribute name="column" type="QualifiedName-ST"/>
     <xs:attribute name="formula" type="xs:string"/>
   </xs:complexType>
+    <xs:complexType name="SubrangeRefresh-CT">
     <xs:attribute name="period-type-v2" type="PeriodTypeV2-ST" use="required"/>
     <xs:attribute name="range" type="xs:int" use="required"/>
   </xs:complexType>
@@ -7553,6 +7554,15 @@
       <xs:group ref="ActionsOrActionList-G"/>
     </xs:sequence>
   </xs:group>
+  <xs:simpleType name="Workbook-Explanations-ST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="number-of-records"/>
+      <xs:enumeration value="average-of-records"/>
+      <xs:enumeration value="extreme-values"/>
+      <xs:enumeration value="distribution-of-records"/>
+      <xs:enumeration value="aggregated-dimensions"/>
+      <xs:enumeration value="unvisualized-measures"/>
+      <xs:enumeration value="null-value"/>
       <xs:enumeration value="explain-average"/>
       <xs:enumeration value="tvd-single-value"/>
       <xs:enumeration value="ad-single-value"/>

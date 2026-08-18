@@ -2113,6 +2113,7 @@
     <xs:attribute name="column" type="QualifiedName-ST"/>
     <xs:attribute name="formula" type="xs:string"/>
   </xs:complexType>
+    <xs:complexType name="SubrangeRefresh-CT">
     <xs:attribute name="period-type-v2" type="PeriodTypeV2-ST" use="required"/>
     <xs:attribute name="range" type="xs:int" use="required"/>
   </xs:complexType>
