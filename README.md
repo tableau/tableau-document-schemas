@@ -23,8 +23,10 @@ Schema are organized into folders by Tableau version using the naming convention
 └───schemas
     ├───2026_1
     │       twb_2026.1.0.xsd    # Tableau Workbook schema for version 2026.1
-    └───2026_2
-            twb_2026.2.0.xsd    # Tableau Workbook schema for version 2026.2
+    ├───2026_2
+    │       twb_2026.2.0.xsd    # Tableau Workbook schema for version 2026.2
+    └───2026_3
+            twb_2026.3.0.xsd    # Tableau Workbook schema for version 2026.3
 ```
 
 ### Version Compatibility
